@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "628612474975",
+    "firebase_url": "https://veats-f9763-default-rtdb.firebaseio.com",
+    "project_id": "veats-f9763",
+    "storage_bucket": "veats-f9763.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628612474975:android:65fc01a9c6b9410b2493ea",
+        "android_client_info": {
+          "package_name": "com.sigsegvsquad.localeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628612474975-lkslig2fqn99igvuelcbveueuqgrepb8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTB-hglHjRJ8N_1y420XeJX2TnQaznTw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628612474975-lkslig2fqn99igvuelcbveueuqgrepb8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

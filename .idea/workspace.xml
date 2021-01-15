@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d51355cd-f3cd-46db-832f-4a72bf56c5e4" name="Default Changelist" comment="complete refactor" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1mxQf2CiHgXe7S5uu5KMOe9utZw" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/miscellaneous" />
+      <recent name="$PROJECT_DIR$/lib/misc" />
+      <recent name="$PROJECT_DIR$/lib/customer_user" />
+      <recent name="$PROJECT_DIR$/lib/order_management" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d51355cd-f3cd-46db-832f-4a72bf56c5e4" name="Default Changelist" comment="" />
+      <created>1610432861237</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610432861237</updated>
+    </task>
+    <task id="LOCAL-00001" summary="a">
+      <created>1610623999238</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610623999238</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ugh">
+      <created>1610630210706</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610630210707</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ugh">
+      <created>1610681281973</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1610681281973</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ugh">
+      <created>1610689236035</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610689236035</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ugh">
+      <created>1610690999722</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1610690999722</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ugh">
+      <created>1610691080498</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610691080498</updated>
+    </task>
+    <task id="LOCAL-00007" summary="first refactor">
+      <created>1610697427832</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610697427832</updated>
+    </task>
+    <task id="LOCAL-00008" summary="second refactor">
+      <created>1610697969220</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1610697969220</updated>
+    </task>
+    <task id="LOCAL-00009" summary="complete refactor">
+      <created>1610715530856</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1610715530856</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="a" />
+    <MESSAGE value="ugh" />
+    <MESSAGE value="first refactor" />
+    <MESSAGE value="second refactor" />
+    <MESSAGE value="complete refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete refactor" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="693" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1610634333193">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="693" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1610634333193" />
+    <state x="100" y="127" width="1720" height="853" key="AVDManager" timestamp="1610519774681">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="100" y="127" width="1720" height="853" key="AVDManager/0.27.1920.1053@0.27.1920.1053" timestamp="1610519774681" />
+    <state x="733" y="282" width="447" height="550" key="FileChooserDialogImpl" timestamp="1610715898580">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="733" y="282" width="447" height="550" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1610715898580" />
+    <state x="1299" y="453" width="281" height="207" key="Github.ShareDialog" timestamp="1610715881361">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="1299" y="453" width="281" height="207" key="Github.ShareDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1610715881361" />
+    <state x="1176" y="239" width="508" height="635" key="Github.UntrackedFilesDialog" timestamp="1610606004000">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="1176" y="239" width="508" height="635" key="Github.UntrackedFilesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1610606004000" />
+    <state width="938" height="215" key="GridCell.Tab.0.bottom" timestamp="1610715822222">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="938" height="215" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1610715822222" />
+    <state width="938" height="215" key="GridCell.Tab.0.center" timestamp="1610715822221">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="938" height="215" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1610715822221" />
+    <state width="938" height="215" key="GridCell.Tab.0.left" timestamp="1610715822220">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="938" height="215" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1610715822220" />
+    <state width="938" height="215" key="GridCell.Tab.0.right" timestamp="1610715822221">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="938" height="215" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1610715822221" />
+    <state x="706" y="256" width="498" height="602" key="RollbackChangesDialog" timestamp="1610635007291">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="706" y="256" width="498" height="602" key="RollbackChangesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1610635007291" />
+    <state x="0" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1610715847998">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="0" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1610715847998" />
+    <state x="1035" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1610715540614">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="1035" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1610715540614" />
+    <state x="731" y="468" width="457" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610691467275">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="731" y="468" width="457" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1610691467275" />
+    <state x="648" y="162" width="623" height="783" key="find.popup" timestamp="1610697860252">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="648" y="162" width="623" height="783" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1610697860252" />
+    <state x="1153" y="452" width="564" height="209" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1610716031480">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="1153" y="452" width="564" height="209" key="git4idea.remote.GitConfigureRemotesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1610716031480" />
+  </component>
+</project>

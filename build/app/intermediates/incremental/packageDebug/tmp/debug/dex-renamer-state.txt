@@ -1,0 +1,10 @@
+#Fri Jan 15 18:26:47 IST 2021
+path.2=classes3.dex
+path.1=classes2.dex
+path.0=classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.2=/home/op/Projects/Hackathon/LocalEat/build/app/intermediates/transforms/dexMerger/debug/0
+base.1=/home/op/Projects/Hackathon/LocalEat/build/app/intermediates/transforms/dexMerger/debug/0
+base.0=/home/op/Projects/Hackathon/LocalEat/build/app/intermediates/transforms/dexMerger/debug/0
