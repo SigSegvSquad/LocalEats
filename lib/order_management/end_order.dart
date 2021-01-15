@@ -22,7 +22,7 @@ class Location extends StatelessWidget {
                 color: Colors.transparent,
                 image: DecorationImage(
                   image: new AssetImage(
-                    'assets/foodtukk.png',
+                    'assets/localeat.png',
                   ),
                   fit: BoxFit.fill,
                 ),

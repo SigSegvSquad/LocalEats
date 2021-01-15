@@ -1,7 +1,7 @@
 localeat
 2.2
-file:///home/op/Projects/Hackathon/LocalEat/
-file:///home/op/Projects/Hackathon/LocalEat/lib/
+file:///home/op/Projects/LocalEats/
+file:///home/op/Projects/LocalEats/lib/
 async
 2.12
 file:///home/op/snap/flutter/common/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.5.0-nullsafety.3/

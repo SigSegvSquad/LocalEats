@@ -34,7 +34,7 @@ class _RestaurantSignupState extends State<RestaurantSignup> {
                 color: Colors.transparent,
                 image: DecorationImage(
                   image: new AssetImage(
-                    'assets/foodtukk1.png',
+                    'assets/localeats1.png',
                   ),
                   fit: BoxFit.fill,
                 ),

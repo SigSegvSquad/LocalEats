@@ -33,7 +33,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 color: Colors.transparent,
                 image: DecorationImage(
                   image: new AssetImage(
-                    'assets/foodtukk1.png',
+                    'assets/localeats1.png',
                   ),
                   fit: BoxFit.fill,
                 ),
