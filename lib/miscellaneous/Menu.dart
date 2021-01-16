@@ -1,22 +1,7 @@
-import 'dart:io';
-
-import 'package:bloc_pattern/bloc_pattern.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:localeat/customer_user/customer_home.dart';
-import 'package:localeat/customer_user/customer_login.dart';
-import 'package:localeat/customer_user/customer_sign_up.dart';
-import 'package:localeat/miscellaneous/cart_bloc.dart';
-import 'package:localeat/miscellaneous/color_bloc.dart';
 import 'package:localeat/miscellaneous/globals.dart' as globals;
-import 'package:localeat/miscellaneous/theme_color.dart';
-import 'package:localeat/order_management/cart.dart';
-import 'package:localeat/order_management/food_item_template.dart';
-import 'package:localeat/restaurant_user/restaurant_login.dart';
-import 'package:localeat/restaurant_user/restaurant_sign_up.dart';
+
 
 class MenuTile extends StatelessWidget {
   final globals.Restaurant restaurant;

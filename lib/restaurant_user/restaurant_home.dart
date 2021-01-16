@@ -108,6 +108,27 @@ class _RestaurantHomeState extends State<RestaurantHome> {
                         'price': this.amount,
                         'imageUrl': this.imageUrl,
                       };
+                     /* Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => deletePage(rest_user: widget.rest_user))
+                      );*/
+                    },
+                    elevation: 4.0,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    splashColor: Colors.yellow,
+                    child: Text(
+                      'Show Menu',
+                      style: TextStyle(color: Colors.black, fontSize: 18.0),
+                    ),
+                  ),
+                  RaisedButton(
+                    color: Themes.color,
+                    onPressed: () {
+                      Map<String, dynamic> itemData = {
+                        'foodName': this.foodName,
+                        'price': this.amount,
+                        'imageUrl': this.imageUrl,
+                      };
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) => deletePage(rest_user: widget.rest_user))
