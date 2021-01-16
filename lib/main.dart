@@ -28,8 +28,9 @@ Future<void> getData() async {
     String location = querySnapshot.documents[i].data['location'];
     String uri = querySnapshot.documents[i].data['image_url'];
     String uid = querySnapshot.documents[i].data['uid'];
-    print(name+location+uri);
-    var restaurant = globals.Restaurant(name: name, uri:uri, uid:uid, location: location);
+    var menu = querySnapshot.documents[i].data['menu'];
+    print(menu);
+    var restaurant = globals.Restaurant(name: name, uri:uri, uid:uid, location: location, menu: menu);
     globals.restaurantList.add(restaurant);
   }
 
@@ -156,7 +157,7 @@ class _HomeState extends State<Home> {
                 for (var restaurant in globals.restaurantList)
                   Builder(
                     builder: (context) {
-                      return ResturantTile(restaurant: restaurant);
+                      return RestaurantTile(restaurant: restaurant);
                     },
                   )
               ],
@@ -503,9 +504,9 @@ class CustomAppBar extends StatelessWidget {
   }
 }
 
-class ResturantTile extends StatelessWidget{
+class RestaurantTile extends StatelessWidget{
 
-  ResturantTile({
+  RestaurantTile({
     @required this.restaurant,
   });
 
@@ -515,7 +516,7 @@ class ResturantTile extends StatelessWidget{
   Widget build(BuildContext context){
     return InkWell(
       onTap: ()=>{
-      Navigator.of(context).push(MaterialPageRoute(builder: (context) => MenuTile(restaurant: restaurant,)))
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => Menu(this.restaurant,)))
       } ,
         child:Container(
       margin:const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0) ,

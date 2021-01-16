@@ -1,14 +1,19 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:localeat/miscellaneous/globals.dart' as globals;
 
-class MenuTile extends StatelessWidget {
-  final globals.Restaurant restaurant;
+class Menu extends StatelessWidget {
+  globals.Restaurant restaurant;
 
-  MenuTile({
-    @required this.restaurant,
-  });
+  Menu(var restaurant){
+    globals.menuList.clear();
+    this.restaurant = restaurant;
+    this.restaurant.menu.forEach((key, value) {
+      globals.menuList.add(globals.MenuItem(name: value['name'], uri: value['image_uri'], price: value['price']));
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +54,13 @@ class MenuTile extends StatelessWidget {
                     height: 200,
                   ),
                 ),
-                MenuList(),
+                for(var menuItem in globals.menuList)
+                  Builder(
+                    builder: (context) {
+                      print(menuItem);
+                      return MenuTile(name: menuItem.name, price: menuItem.price, uri: menuItem.uri,);
+                    },
+                  )
               ],
             )),
       ),
@@ -57,41 +68,17 @@ class MenuTile extends StatelessWidget {
   }
 }
 
-class MenuList extends StatelessWidget {
-  @override
+class MenuTile extends StatelessWidget {
+  final String name, price, uri;
 
-  Widget build(BuildContext context) {
-    Firestore.instance
-        .collection('Restaurant')
-        .document('q82S4DFACWUDXNwoJmYP9eYgqwl2')
-        .get()
-        .then((querySnapshot) {
-      Firestore.instance
-          .collection('Restaurant')
-          .document('q82S4DFACWUDXNwoJmYP9eYgqwl2')
-          .get()
-          .then((querySnapshot) {
-        var menu = querySnapshot.data['menu'];
-        menu.forEach((key, map) {
-          Menu(name: menu['name'], price: menu['price']);
-        });
-      });
-    });
-    return Container();
-  }
-}
-
-class Menu extends StatelessWidget {
-  final String name, price;
-
-  Menu({
-    @required this.name,
-    this.price,
+  MenuTile({
+    @required this.name, @required this.price, @required this.uri
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(
+        child: Container(
       padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -130,6 +117,6 @@ class Menu extends StatelessWidget {
                   )))
         ],
       ),
-    );
+    ));
   }
 }
