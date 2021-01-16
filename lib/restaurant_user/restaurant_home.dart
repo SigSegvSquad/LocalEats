@@ -74,7 +74,9 @@ class _RestaurantHomeState extends State<RestaurantHome> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  RaisedButton(
+                  SizedBox(
+                      width: 200,
+                      child:RaisedButton(
                     color: Themes.color,
                     onPressed: () {
                       Map<String, dynamic> itemData = {
@@ -94,11 +96,14 @@ class _RestaurantHomeState extends State<RestaurantHome> {
                       'Show Menu',
                       style: TextStyle(color: Colors.black, fontSize: 28.0),
                     ),
-                  ),
+                  )
+        ),
                   SizedBox(height:20),
                   //Column()
                   //mainAxisAlignment: MainAxisAlignment.start,
-                  RaisedButton(
+                  SizedBox(
+                    width: 200,
+                  child:RaisedButton(
                     color: Themes.color,
                     onPressed: () {
                       Map<String, dynamic> itemData = {
@@ -123,9 +128,12 @@ class _RestaurantHomeState extends State<RestaurantHome> {
                       'Add Item',
                       style: TextStyle(color: Colors.black, fontSize: 28.0),
                     ),
+                  )
                   ),
                    SizedBox(height:20),
-                   RaisedButton(
+                   SizedBox(
+                     width: 200,
+                     child:RaisedButton(
                     color: Themes.color,
                     onPressed: () {
                       Map<String, dynamic> itemData = {
@@ -152,10 +160,13 @@ class _RestaurantHomeState extends State<RestaurantHome> {
                       'Delete',
                       style: TextStyle(color: Colors.black, fontSize: 28.0),
                     ),
-                  ),
+                  )
+                   ),
                   SizedBox(height:20),
                   //mainAxisAlignment: MainAxisAlignment.end,
-                  RaisedButton(
+                  SizedBox(
+                    width: 200,
+                  child:RaisedButton(
                     color: Colors.red.shade400,
                     onPressed: () {
                       Navigator.of(context).pop();
@@ -173,6 +184,7 @@ class _RestaurantHomeState extends State<RestaurantHome> {
                       'LogOut',
                       style: TextStyle(color: Colors.black, fontSize: 28.0),
                     ),
+                  )
                   )
 
                 ],
