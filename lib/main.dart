@@ -48,8 +48,11 @@ Future<Position> determinePosition() async {
 
   Position userPosition = await Geolocator.getCurrentPosition();
 
-  print('\nUser\'s position: ${userPosition.toString()}');
-
+  print('\nUser\'s latitude: ${userPosition.latitude} longitude: ${userPosition.longitude}');
+  //User's latitude: 18.6114617 longitude: 73.7470233
+  //User's latitude: 24.584475 longitude: 73.7195267
+  double distanceInMeters = Geolocator.distanceBetween(18.6114617, 73.7470233, 24.584475, 73.7195267);
+  print('Distance between you and the user in udaipur: ${distanceInMeters}');
   return userPosition;
 }
 
