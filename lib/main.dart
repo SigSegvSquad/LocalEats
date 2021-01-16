@@ -11,6 +11,7 @@ import 'package:localeat/miscellaneous/cart_bloc.dart';
 import 'package:localeat/miscellaneous/color_bloc.dart';
 import 'package:localeat/miscellaneous/globals.dart' as globals;
 import 'package:localeat/miscellaneous/theme_color.dart';
+import 'package:localeat/miscellaneous/Menu.dart';
 import 'package:localeat/order_management/cart.dart';
 import 'package:localeat/order_management/food_item_template.dart';
 import 'package:localeat/restaurant_user/restaurant_login.dart';
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
         Bloc((i) => ColorBloc()),
       ],
       child: MaterialApp(
-          title: "Food Tukk",
+          title: "Local Eat",
           home: FirstPage(),
           debugShowCheckedModeBanner: false,
           routes: <String, WidgetBuilder>{
@@ -479,6 +480,7 @@ class CustomAppBar extends StatelessWidget {
     );
   }
 
+
   GestureDetector buildGestureDetector(
       int length, BuildContext context, List<FoodItem> foodItems) {
     return GestureDetector(
@@ -511,7 +513,11 @@ class ResturantTile extends StatelessWidget{
 
   @override
   Widget build(BuildContext context){
-    return Container(
+    return InkWell(
+      onTap: ()=>{
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) => MenuTile(restaurant: restaurant,)))
+      } ,
+        child:Container(
       margin:const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0) ,
       padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
       decoration: BoxDecoration(
@@ -570,6 +576,7 @@ class ResturantTile extends StatelessWidget{
           ),
         ],
       ),
+    )
     );
   }
 }

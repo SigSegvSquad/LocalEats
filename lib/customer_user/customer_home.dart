@@ -7,7 +7,7 @@ class FirstPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: Colors.white,
       resizeToAvoidBottomPadding: false,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 65.0),
@@ -16,7 +16,7 @@ class FirstPage extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: 10),
             Container(
-              padding: EdgeInsets.all(150),
+              padding: EdgeInsets.all(120),
               width: 280,
               decoration: new BoxDecoration(
                 color: Colors.transparent,
