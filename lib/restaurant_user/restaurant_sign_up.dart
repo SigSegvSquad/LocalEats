@@ -21,6 +21,7 @@ class _RestaurantSignupState extends State<RestaurantSignup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       resizeToAvoidBottomPadding: false,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 1.0),

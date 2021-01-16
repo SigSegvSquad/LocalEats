@@ -16,8 +16,44 @@ import 'package:localeat/order_management/cart.dart';
 import 'package:localeat/order_management/food_item_template.dart';
 import 'package:localeat/restaurant_user/restaurant_login.dart';
 import 'package:localeat/restaurant_user/restaurant_sign_up.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:location_permissions/location_permissions.dart';
 
+//get current position of the user
+Future<Position> determinePosition() async {
+  bool serviceEnabled;
+  LocationPermission permission;
 
+  await LocationPermissions().requestPermissions();
+
+  serviceEnabled = await Geolocator.isLocationServiceEnabled();
+  if (!serviceEnabled) {
+    return Future.error('Location services are disabled.');
+  }
+
+  permission = await Geolocator.checkPermission();
+  if (permission == LocationPermission.deniedForever) {
+    return Future.error(
+        'Location permissions are permantly denied, we cannot request permissions.');
+  }
+
+  if (permission == LocationPermission.denied) {
+    permission = await Geolocator.requestPermission();
+    if (permission != LocationPermission.whileInUse &&
+        permission != LocationPermission.always) {
+      return Future.error(
+          'Location permissions are denied (actual value: $permission).');
+    }
+  }
+
+  Position userPosition = await Geolocator.getCurrentPosition();
+
+  print('\nUser\'s position: ${userPosition.toString()}');
+
+  return userPosition;
+}
+
+//get restaurant data
 Future<void> getData() async {
   QuerySnapshot querySnapshot;
   // Get docs from collection reference
@@ -44,6 +80,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     getData();
+    determinePosition();
     return BlocProvider(
       blocs: [
         //add yours BLoCs controlles

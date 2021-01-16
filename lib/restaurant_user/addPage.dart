@@ -71,6 +71,7 @@ class _addPageState extends State<addPage> {
               SizedBox(height: 60),
               Container(
                 width: 350,
+                margin: EdgeInsets.all(10),
                 child: TextField(
                   keyboardType: TextInputType.url,
                   style: TextStyle(fontFamily: 'Raleway', color: Colors.black),
@@ -87,6 +88,7 @@ class _addPageState extends State<addPage> {
               ),
               Container(
                 width: 350,
+                margin: EdgeInsets.all(10),
                 child: TextField(
                   keyboardType: TextInputType.text,
                   maxLength: 15,
@@ -142,7 +144,7 @@ class _addPageState extends State<addPage> {
                     elevation: 4.0,
                     splashColor: Colors.yellow,
                     child: Text(
-                      'Submit',
+                      'Add',
                       style: TextStyle(color: Colors.black, fontSize: 18.0),
                     ),
                   ),
