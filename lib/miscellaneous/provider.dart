@@ -9,7 +9,9 @@ class CartProvider {
 
     if (foodItems.length > 0) {
       for (int i = 0; i < foodItems.length; i++) {
-        if (foodItems[i].id == foodItem.id) {
+        print(foodItems[i].title);
+        print(foodItem.title);
+        if (foodItems[i].title == foodItem.title) {
           increaseItemQuantity(foodItem);
           isPresent = true;
           break;

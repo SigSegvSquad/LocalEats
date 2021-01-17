@@ -1,8 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
+import 'package:localeat/miscellaneous/cart_bloc.dart';
+import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:localeat/miscellaneous/globals.dart' as globals;
+import 'package:localeat/order_management/food_item_template.dart';
 
 class Menu extends StatelessWidget {
   globals.Restaurant restaurant;
@@ -60,6 +63,7 @@ class MenuTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var item = FoodItem(title: name, price: double.parse(price), imgUrl: uri);
     return GestureDetector(
         child: Container(
       padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
@@ -105,7 +109,7 @@ class MenuTile extends StatelessWidget {
             ),
           ),
 
-          AwesomeButton()
+          AwesomeButton(item)
 
         ],
       ),
@@ -114,6 +118,11 @@ class MenuTile extends StatelessWidget {
 }
 
 class AwesomeButton extends StatefulWidget {
+  FoodItem item;
+
+  AwesomeButton(this.item);
+
+
   @override
   AwesomeButtonState createState() => new AwesomeButtonState();
 }
@@ -122,6 +131,15 @@ class AwesomeButtonState extends State<AwesomeButton> {
   int counter = 0;
   @override
   Widget build(BuildContext context){
+    var item = widget.item;
+    CartListBloc bloc = BlocProvider.getBloc<CartListBloc>();
+    addToCart(FoodItem foodItem) {
+      bloc.addToList(foodItem);
+    }
+
+    removeFromList(FoodItem foodItem) {
+      bloc.removeFromList(foodItem);
+    }
     return  new Container(
                 child: new Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -133,11 +151,16 @@ class AwesomeButtonState extends State<AwesomeButton> {
                           side: BorderSide(color: Colors.red)
                       ),
                           onPressed: () {
+                            removeFromList(item);
+                            final snackBar = SnackBar(
+                              content: Text('₹${item.title} removed from Cart'),
+                              duration: Duration(milliseconds: 550),
+                            );
+                            Scaffold.of(context).showSnackBar(snackBar);
                             setState(() {
-                              if (counter > 0) (
-                                  // ignore: unnecessary_statements
-                                  counter--
-                              );
+                              if(counter>0){
+                                counter--;
+                              }
                             });
                           }
                       )
@@ -154,6 +177,12 @@ class AwesomeButtonState extends State<AwesomeButton> {
                                 side: BorderSide(color: Colors.red)
                         ),
                             onPressed: (){
+                              addToCart(item);
+                              final snackBar = SnackBar(
+                                content: Text('₹${item.title} added to Cart'),
+                                duration: Duration(milliseconds: 550),
+                              );
+                              Scaffold.of(context).showSnackBar(snackBar);
                               setState(() {
                                 counter++;
                               });
