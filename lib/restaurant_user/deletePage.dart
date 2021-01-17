@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:localeat/miscellaneous/theme_color.dart';
+import 'package:localeat/miscellaneous/globals.dart' as globals;
 import 'package:localeat/user_management/restaurant_management.dart';
+
 import 'addPage.dart';
 
 class deletePage extends StatefulWidget {
@@ -79,7 +80,7 @@ class _deletePageState extends State<deletePage> {
                   decoration: InputDecoration(
                     labelText: "Food Name",
                     labelStyle:
-                    TextStyle(fontWeight: FontWeight.w200, fontSize: 20),
+                        TextStyle(fontWeight: FontWeight.w200, fontSize: 20),
                     border: OutlineInputBorder(),
                   ),
                   onChanged: (value) {
@@ -92,7 +93,7 @@ class _deletePageState extends State<deletePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   RaisedButton(
-                    color: Themes.color,
+                    color: globals.accent_color,
                     onPressed: () {
                       Map<String, dynamic> itemData = {
                         'foodName': this.foodName,
@@ -108,7 +109,7 @@ class _deletePageState extends State<deletePage> {
                       });
                     },
                     elevation: 4.0,
-                    splashColor: Colors.yellow,
+                    splashColor: globals.accent_color,
                     child: Text(
                       'Delete',
                       style: TextStyle(color: Colors.black, fontSize: 18.0),
@@ -126,7 +127,7 @@ class _deletePageState extends State<deletePage> {
                       });
                     },
                     elevation: 4.0,
-                    splashColor: Colors.yellow,
+                    splashColor: globals.accent_color,
                     child: Text(
                       'Back',
                       style: TextStyle(color: Colors.black, fontSize: 18.0),

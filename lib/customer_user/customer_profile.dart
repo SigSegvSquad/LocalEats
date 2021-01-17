@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:localeat/customer_user/customer_login.dart';
-import 'package:localeat/miscellaneous/theme_color.dart';
+import 'package:localeat/miscellaneous/globals.dart' as globals;
 
 class ProfilePage extends StatefulWidget {
   final UserDetails detailsUser;
@@ -22,7 +22,7 @@ class _ProfilePageState extends State<ProfilePage> {
       body: new Stack(
         children: <Widget>[
           ClipPath(
-            child: Container(color: Themes.color),
+            child: Container(color: globals.accent_color),
             clipper: getClipper(),
           ),
           Positioned(
@@ -34,7 +34,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   width: 150.0,
                   height: 150.0,
                   decoration: BoxDecoration(
-                      color: Themes.color,
+                      color: globals.accent_color,
                       image: DecorationImage(
                           image: NetworkImage(
                               '${this.widget.detailsUser.photoUrl}'),
@@ -70,8 +70,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   width: 250.0,
                   child: Material(
                     borderRadius: BorderRadius.circular(20.0),
-                    shadowColor: Themes.color,
-                    color: Themes.color,
+                    shadowColor: globals.accent_color,
+                    color: globals.accent_color,
                     elevation: 7.0,
                     child: GestureDetector(
                       onTap: () {
@@ -95,8 +95,8 @@ class _ProfilePageState extends State<ProfilePage> {
                   width: 250.0,
                   child: Material(
                     borderRadius: BorderRadius.circular(20.0),
-                    shadowColor: Themes.color,
-                    color: Themes.color,
+                    shadowColor: globals.accent_color,
+                    color: globals.accent_color,
                     elevation: 7.0,
                     child: GestureDetector(
                       onTap: () {

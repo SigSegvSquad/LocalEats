@@ -1,10 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:localeat/miscellaneous/theme_color.dart';
+import 'package:localeat/miscellaneous/globals.dart' as globals;
 import 'package:localeat/user_management/restaurant_management.dart';
+
 import 'addPage.dart';
 import 'deletePage.dart';
+
 class RestaurantHome extends StatefulWidget {
   final FirebaseUser rest_user;
 
@@ -69,124 +71,126 @@ class _RestaurantHomeState extends State<RestaurantHome> {
                   ],
                 ),
               ),
-
               SizedBox(height: 100),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   SizedBox(
                       width: 200,
-                      child:RaisedButton(
-                    color: Themes.color,
-                    onPressed: () {
-                      Map<String, dynamic> itemData = {
-                        'foodName': this.foodName,
-                        'price': this.amount,
-                        'imageUrl': this.imageUrl,
-                      };
-                       /*Navigator.push(
+                      child: RaisedButton(
+                        color: globals.accent_color,
+                        onPressed: () {
+                          Map<String, dynamic> itemData = {
+                            'foodName': this.foodName,
+                            'price': this.amount,
+                            'imageUrl': this.imageUrl,
+                          };
+                          /*Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) => MenuTile(rest_user: widget.rest_user))
                       );*/
-                    },
-                    elevation: 4.0,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                    splashColor: Colors.yellow,
-                    child: Text(
-                      'Show Menu',
-                      style: TextStyle(color: Colors.black, fontSize: 28.0),
-                    ),
-                  )
-        ),
-                  SizedBox(height:20),
+                        },
+                        elevation: 4.0,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        splashColor: globals.accent_color,
+                        child: Text(
+                          'Show Menu',
+                          style: TextStyle(color: Colors.black, fontSize: 28.0),
+                        ),
+                      )),
+                  SizedBox(height: 20),
                   //Column()
                   //mainAxisAlignment: MainAxisAlignment.start,
                   SizedBox(
-                    width: 200,
-                  child:RaisedButton(
-                    color: Themes.color,
-                    onPressed: () {
-                      Map<String, dynamic> itemData = {
-                        'foodName': this.foodName,
-                        'price': this.amount,
-                        'imageUrl': this.imageUrl,
-                      };
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => addPage(rest_user: widget.rest_user)));
-                      restaurant_management
-                          .addData(itemData, widget.rest_user)
-                          .then((result) {
-                        dialogTrigger(context);
-                      }).catchError((e) {
-                        print(e);
-                      });
-                    },
-                    elevation: 4.0,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                    splashColor: Colors.yellow,
-                    child: Text(
-                      'Add Item',
-                      style: TextStyle(color: Colors.black, fontSize: 28.0),
-                    ),
-                  )
-                  ),
-                   SizedBox(height:20),
-                   SizedBox(
-                     width: 200,
-                     child:RaisedButton(
-                    color: Themes.color,
-                    onPressed: () {
-                      Map<String, dynamic> itemData = {
-                        'foodName': this.foodName,
-                        'price': this.amount,
-                        'imageUrl': this.imageUrl,
-                      };
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => deletePage(rest_user: widget.rest_user))
-                      );
-                      /*restaurant_management
+                      width: 200,
+                      child: RaisedButton(
+                        color: globals.accent_color,
+                        onPressed: () {
+                          Map<String, dynamic> itemData = {
+                            'foodName': this.foodName,
+                            'price': this.amount,
+                            'imageUrl': this.imageUrl,
+                          };
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      addPage(rest_user: widget.rest_user)));
+                          restaurant_management
+                              .addData(itemData, widget.rest_user)
+                              .then((result) {
+                            dialogTrigger(context);
+                          }).catchError((e) {
+                            print(e);
+                          });
+                        },
+                        elevation: 4.0,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        splashColor: globals.accent_color,
+                        child: Text(
+                          'Add Item',
+                          style: TextStyle(color: Colors.black, fontSize: 28.0),
+                        ),
+                      )),
+                  SizedBox(height: 20),
+                  SizedBox(
+                      width: 200,
+                      child: RaisedButton(
+                        color: globals.accent_color,
+                        onPressed: () {
+                          Map<String, dynamic> itemData = {
+                            'foodName': this.foodName,
+                            'price': this.amount,
+                            'imageUrl': this.imageUrl,
+                          };
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      deletePage(rest_user: widget.rest_user)));
+                          /*restaurant_management
                           .deleteData(itemData, widget.rest_user)
                           .then((result) {
                         dialogTrigger(context);
                       }).catchError((e) {
                         //print(e);
                       });*/
-                    },
-                    elevation: 4.0,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                    splashColor: Colors.yellow,
-                    child: Text(
-                      'Delete',
-                      style: TextStyle(color: Colors.black, fontSize: 28.0),
-                    ),
-                  )
-                   ),
-                  SizedBox(height:20),
+                        },
+                        elevation: 4.0,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        splashColor: globals.accent_color,
+                        child: Text(
+                          'Delete',
+                          style: TextStyle(color: Colors.black, fontSize: 28.0),
+                        ),
+                      )),
+                  SizedBox(height: 20),
                   //mainAxisAlignment: MainAxisAlignment.end,
                   SizedBox(
-                    width: 200,
-                  child:RaisedButton(
-                    color: Colors.red.shade400,
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                      FirebaseAuth.instance.signOut().then((value) {
-                        Navigator.of(context)
-                            .pushReplacementNamed('\firstpage');
-                      }).catchError((e) {
-                        print(e);
-                      });
-                    },
-                    elevation: 4.0,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                    splashColor: Colors.yellow,
-                    child: Text(
-                      'LogOut',
-                      style: TextStyle(color: Colors.black, fontSize: 28.0),
-                    ),
-                  )
-                  )
-
+                      width: 200,
+                      child: RaisedButton(
+                        color: Colors.red.shade400,
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                          FirebaseAuth.instance.signOut().then((value) {
+                            Navigator.of(context)
+                                .pushReplacementNamed('\firstpage');
+                          }).catchError((e) {
+                            print(e);
+                          });
+                        },
+                        elevation: 4.0,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
+                        splashColor: globals.accent_color,
+                        child: Text(
+                          'LogOut',
+                          style: TextStyle(color: Colors.black, fontSize: 28.0),
+                        ),
+                      ))
                 ],
               )
             ],
@@ -205,8 +209,8 @@ Future<bool> dialogTrigger(BuildContext context) async {
         return AlertDialog(
           //title: Text('Job done', style: TextStyle(fontSize: 22.0)),
           //content: Text(
-            //'Added Successfully',
-            //style: TextStyle(fontSize: 20.0),
+          //'Added Successfully',
+          //style: TextStyle(fontSize: 20.0),
           //),
           actions: <Widget>[
             FlatButton(
@@ -214,7 +218,7 @@ Future<bool> dialogTrigger(BuildContext context) async {
                 'Work Now',
                 style: TextStyle(fontSize: 18),
               ),
-              textColor: Themes.color,
+              textColor: globals.accent_color,
               onPressed: () {
                 Navigator.of(context).pop();
               },
@@ -222,7 +226,6 @@ Future<bool> dialogTrigger(BuildContext context) async {
           ],
         );
       });
-
 }
 
 /*class MenuTile extends StatelessWidget {

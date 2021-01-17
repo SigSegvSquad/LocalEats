@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:localeat/miscellaneous/theme_color.dart';
+import 'package:localeat/miscellaneous/globals.dart' as globals;
 import 'package:localeat/restaurant_user/restaurant_login.dart';
 import 'package:localeat/user_management/restaurant_management.dart';
 
@@ -113,10 +113,10 @@ class _RestaurantSignupState extends State<RestaurantSignup> {
                   height: 50.0,
                   width: 250,
                   decoration: BoxDecoration(
-                      color: Themes.color,
+                      color: globals.accent_color,
                       borderRadius: BorderRadius.circular(25.0),
                       boxShadow: [
-                        BoxShadow(blurRadius: 2, color: Themes.color)
+                        BoxShadow(blurRadius: 2, color: globals.accent_color)
                       ]),
                   child: Center(
                     child: Text(

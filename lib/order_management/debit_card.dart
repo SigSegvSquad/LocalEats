@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:localeat/customer_user/profile_template.dart';
-import 'package:localeat/miscellaneous/theme_color.dart';
+import 'package:localeat/miscellaneous/globals.dart' as globals;
 import 'package:localeat/order_management/payment_success.dart';
 
 class CreditCardPage extends StatelessWidget {
@@ -64,7 +64,7 @@ class CreditCardPage extends StatelessWidget {
           child: Stack(
             fit: StackFit.expand,
             children: <Widget>[
-              Container(decoration: BoxDecoration(color: Themes.color)),
+              Container(decoration: BoxDecoration(color: globals.accent_color)),
               Opacity(
                 opacity: 0.5,
                 child: Image.asset(
@@ -223,7 +223,7 @@ class CreditCardPage extends StatelessWidget {
             Navigator.of(_context).pushReplacement(MaterialPageRoute(
                 builder: (BuildContext context) => PaymentSuccessPage()));
           },
-          backgroundColor: Themes.color,
+          backgroundColor: globals.accent_color,
           icon: Icon(
             FontAwesomeIcons.amazonPay,
             color: Colors.black,

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:localeat/miscellaneous/theme_color.dart';
+import 'package:localeat/miscellaneous/globals.dart' as globals;
 import 'package:localeat/order_management/end_order.dart';
 import 'package:localeat/customer_user/profile_template.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -116,7 +116,7 @@ class PaymentSuccessPageState extends State<PaymentSuccessPage> {
                   child: ListTile(
                     leading: Icon(
                       FontAwesomeIcons.ccVisa,
-                      color: Themes.color,
+                      color: globals.accent_color,
                     ),
                     title: Text("Credit/Debit Card"),
                     subtitle: Text("PNB Card ending ***6"),
@@ -128,7 +128,7 @@ class PaymentSuccessPageState extends State<PaymentSuccessPage> {
                     height: 40.0,
                     width: 220,
                     decoration: BoxDecoration(
-                      color: Themes.color,
+                      color: globals.accent_color,
                       borderRadius: BorderRadius.circular(25.0),
                     ),
                     child: Center(

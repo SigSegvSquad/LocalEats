@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:localeat/miscellaneous/cart_bloc.dart';
 import 'package:localeat/miscellaneous/color_bloc.dart';
-import 'package:localeat/miscellaneous/theme_color.dart';
+import 'package:localeat/miscellaneous/globals.dart' as globals;
 import 'package:localeat/order_management/food_item_template.dart';
 import 'package:localeat/order_management/payment_page.dart';
 
@@ -57,7 +57,7 @@ class BottomBar extends StatelessWidget {
               margin: EdgeInsets.only(right: 25),
               padding: EdgeInsets.all(25),
               decoration: BoxDecoration(
-                  color: Themes.color, borderRadius: BorderRadius.circular(15)),
+                  color: globals.accent_color, borderRadius: BorderRadius.circular(15)),
               child: Row(
                 children: <Widget>[
                   Text(

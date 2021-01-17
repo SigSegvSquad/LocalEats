@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:localeat/miscellaneous/theme_color.dart';
+import 'package:localeat/miscellaneous/globals.dart' as globals;
 import 'package:localeat/user_management/restaurant_management.dart';
 
 class addPage extends StatefulWidget {
@@ -126,7 +126,7 @@ class _addPageState extends State<addPage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   RaisedButton(
-                    color: Themes.color,
+                    color: globals.accent_color,
                     onPressed: () {
                       Map<String, dynamic> itemData = {
                         'foodName': this.foodName,
@@ -142,7 +142,7 @@ class _addPageState extends State<addPage> {
                       });
                     },
                     elevation: 4.0,
-                    splashColor: Colors.yellow,
+                    splashColor: globals.accent_color,
                     child: Text(
                       'Add',
                       style: TextStyle(color: Colors.black, fontSize: 18.0),
@@ -160,7 +160,7 @@ class _addPageState extends State<addPage> {
                       });
                     },
                     elevation: 4.0,
-                    splashColor: Colors.yellow,
+                    splashColor: globals.accent_color,
                     child: Text(
                       'Back',
                       style: TextStyle(color: Colors.black, fontSize: 18.0),
@@ -193,7 +193,7 @@ Future<bool> dialogTrigger(BuildContext context) async {
                 'Done',
                 style: TextStyle(fontSize: 18),
               ),
-              textColor: Themes.color,
+              textColor: globals.accent_color,
               onPressed: () {
                 Navigator.of(context).pop();
               },

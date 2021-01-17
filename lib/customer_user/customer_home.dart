@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:localeat/miscellaneous/theme_color.dart';
+import 'package:localeat/miscellaneous/globals.dart' as globals;
 
 class FirstPage extends StatelessWidget {
   @override
@@ -31,9 +31,9 @@ class FirstPage extends StatelessWidget {
             ),
             Container(
               decoration: BoxDecoration(
-                  color: Themes.color,
+                  color: globals.accent_color,
                   borderRadius: BorderRadius.circular(30.0),
-                  boxShadow: [BoxShadow(blurRadius: 2.0, color: Themes.color)]),
+                  boxShadow: [BoxShadow(blurRadius: 2.0, color: globals.accent_color)]),
               width: 220,
               child: Align(
                 alignment: Alignment.centerRight,
@@ -61,9 +61,9 @@ class FirstPage extends StatelessWidget {
             SizedBox(height: 20),
             Container(
               decoration: BoxDecoration(
-                  color: Themes.color,
+                  color: globals.accent_color,
                   borderRadius: BorderRadius.circular(30.0),
-                  boxShadow: [BoxShadow(blurRadius: 2.0, color: Themes.color)]),
+                  boxShadow: [BoxShadow(blurRadius: 2.0, color: globals.accent_color)]),
               width: 245,
               child: Align(
                 alignment: Alignment.centerRight,

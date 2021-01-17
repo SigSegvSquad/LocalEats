@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:localeat/customer_user/customer_profile.dart';
-import 'package:localeat/miscellaneous/theme_color.dart';
+import 'package:localeat/miscellaneous/globals.dart' as globals;
 
 class SignInPage extends StatefulWidget {
   @override
@@ -43,7 +43,7 @@ class _SignInPageState extends State<SignInPage> {
             ),
             Container(
               decoration: BoxDecoration(
-                  color: Themes.color,
+                  color: globals.accent_color,
                   borderRadius: BorderRadius.circular(30.0)),
               width: 225.0,
               child: Align(
@@ -162,10 +162,10 @@ class _SignInPageState extends State<SignInPage> {
                   height: 50.0,
                   width: 250,
                   decoration: BoxDecoration(
-                      color: Themes.color,
+                      color: globals.accent_color,
                       borderRadius: BorderRadius.circular(25.0),
                       boxShadow: [
-                        BoxShadow(blurRadius: 3, color: Themes.color)
+                        BoxShadow(blurRadius: 3, color: globals.accent_color)
                       ]),
                   child: Center(
                     child: Text(

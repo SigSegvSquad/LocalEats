@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:localeat/customer_user/customer_login.dart';
-import 'package:localeat/miscellaneous/theme_color.dart';
+import 'package:localeat/miscellaneous/globals.dart' as globals;
 import 'package:localeat/user_management/user_management.dart';
 
 final FirebaseAuth mAuth = FirebaseAuth.instance;
@@ -99,10 +99,10 @@ class _SignUpPageState extends State<SignUpPage> {
                   height: 50.0,
                   width: 250,
                   decoration: BoxDecoration(
-                      color: Themes.color,
+                      color: globals.accent_color,
                       borderRadius: BorderRadius.circular(25.0),
                       boxShadow: [
-                        BoxShadow(blurRadius: 2, color: Themes.color)
+                        BoxShadow(blurRadius: 2, color: globals.accent_color)
                       ]),
                   child: Center(
                     child: Text(

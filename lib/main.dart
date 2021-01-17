@@ -10,7 +10,6 @@ import 'package:localeat/customer_user/customer_sign_up.dart';
 import 'package:localeat/miscellaneous/cart_bloc.dart';
 import 'package:localeat/miscellaneous/color_bloc.dart';
 import 'package:localeat/miscellaneous/globals.dart' as globals;
-import 'package:localeat/miscellaneous/theme_color.dart';
 import 'package:localeat/miscellaneous/Menu.dart';
 import 'package:localeat/order_management/cart.dart';
 import 'package:localeat/order_management/food_item_template.dart';
@@ -132,7 +131,7 @@ class _HomeState extends State<Home> {
             Container(
               width: double.infinity,
               padding: EdgeInsets.all(20),
-              color: Themes.color,
+              color: globals.accent_color,
               child: Center(
                 child: Column(
                   children: <Widget>[
@@ -390,7 +389,7 @@ class CategoryListItem extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(10, 10, 10, 20),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(40),
-        color: selected ? Themes.color : Colors.white,
+        color: selected ? globals.accent_color : Colors.white,
         border: Border.all(
             color: selected ? Colors.transparent : Colors.grey[200],
             width: 1.5),
@@ -538,7 +537,7 @@ class CustomAppBar extends StatelessWidget {
         child: Text(length.toString()),
         padding: EdgeInsets.all(15),
         decoration: BoxDecoration(
-            color: Colors.yellow[800], borderRadius: BorderRadius.circular(50)),
+            color: globals.accent_color, borderRadius: BorderRadius.circular(50)),
       ),
     );
   }
