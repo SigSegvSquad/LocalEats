@@ -28,42 +28,25 @@ class Menu extends StatelessWidget {
             }),
         title: const Text("Today's Menu"),
       ),
-      body: Container(
-        child: Container(
-            width: double.maxFinite,
-            padding: const EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.05),
-                  spreadRadius: 1,
-                  blurRadius: 1,
-                  offset: Offset(0, 3), // changes position of shadow
-                ),
-              ],
+      body: ListView(
+        children: [
+          ClipRRect(
+            child: Image.network(
+              restaurant.uri,
+              fit: BoxFit.cover,
+              width: double.infinity,
+              height: 200,
             ),
-            child: Column(
-              children: [
-                ClipRRect(
-                  child: Image.network(
-                    restaurant.uri,
-                    fit: BoxFit.cover,
-                    width: double.infinity,
-                    height: 200,
-                  ),
-                ),
-                for(var menuItem in globals.menuList)
-                  Builder(
-                    builder: (context) {
-                      print(menuItem);
-                      return MenuTile(name: menuItem.name, price: menuItem.price, uri: menuItem.uri,);
-                    },
-                  )
-              ],
-            )),
-      ),
+          ),
+          for(var menuItem in globals.menuList)
+            Builder(
+              builder: (context) {
+                print(menuItem);
+                return MenuTile(name: menuItem.name, price: menuItem.price, uri: menuItem.uri,);
+              },
+            )
+        ],
+      )
     );
   }
 }
@@ -136,7 +119,7 @@ class AwesomeButton extends StatefulWidget {
 }
 
 class AwesomeButtonState extends State<AwesomeButton> {
-  int counter = 1;
+  int counter = 0;
   @override
   Widget build(BuildContext context){
     return  new Container(
