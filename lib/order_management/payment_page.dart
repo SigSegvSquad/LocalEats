@@ -4,6 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:localeat/miscellaneous/globals.dart' as globals;
 import 'package:localeat/order_management/end_order.dart';
 import 'package:localeat/order_management/debit_card.dart';
+import 'package:flutter_map/flutter_map.dart';
+import "package:latlong/latlong.dart" as latLng;
 
 class PaymentPage extends StatelessWidget {
   @override
@@ -109,21 +111,47 @@ class PaymentPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 150),
-            Container(
-              padding: EdgeInsets.all(125),
-              height: 350,
-              width: 340,
-              decoration: new BoxDecoration(
-                color: Colors.white24,
-                image: DecorationImage(
-                  image: new AssetImage(
-                    'assets/moto.png',
+            SizedBox(
+              height:MediaQuery.of(context).size.height * 0.4,
+            child:Container(
+                child:FlutterMap(
+                  options: new MapOptions(
+                    center: new latLng.LatLng(18.464285, 73.8677875),
+                    zoom: 16.0,
                   ),
-                  fit: BoxFit.fill,
-                ),
-                shape: BoxShape.rectangle,
-              ),
+                  layers: [
+                    new TileLayerOptions(
+                        urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                        subdomains: ['a', 'b', 'c']),
+                    new MarkerLayerOptions(
+                      markers: [
+                        new Marker(
+                          width: 40.0,
+                          height: 40.0,
+                          point: new latLng.LatLng(18.4640767, 73.8676183),
+                          builder: (ctx) => new Container(
+                              child: Image(image:NetworkImage('https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png'))
+                          ),
+                        ),
+                      ],
+                    ),
+                    new MarkerLayerOptions(
+                      markers: [
+                        new Marker(
+                          width: 40.0,
+                          height: 40.0,
+                          point: new latLng.LatLng(18.4644933, 73.8679567),
+                          builder: (ctx) => new Container(
+                            child: Image(image:NetworkImage('http://www.pngall.com/wp-content/uploads/2017/05/Map-Marker-PNG-Pic.png')),
+                          ),
+                        ),
+                      ],
+                    ),
+
+                  ],
+                )
             ),
+            )
           ],
         ),
       ),

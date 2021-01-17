@@ -18,6 +18,7 @@ import 'package:localeat/restaurant_user/restaurant_sign_up.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:location_permissions/location_permissions.dart';
 
+
 //get current position of the user
 Future<Position> determinePosition() async {
   bool serviceEnabled;
@@ -67,8 +68,10 @@ Future<void> getData() async {
     String uri = querySnapshot.documents[i].data['image_url'];
     String uid = querySnapshot.documents[i].data['uid'];
     var menu = querySnapshot.documents[i].data['menu'];
-    print(menu);
-    var restaurant = globals.Restaurant(name: name, uri:uri, uid:uid, location: location, menu: menu);
+    var latitude = querySnapshot.documents[i].data['coordinates'][0];
+    var longitude = querySnapshot.documents[i].data['coordinates'][1];
+    //print('${latitude} and ${longitude}');
+    var restaurant = globals.Restaurant(name: name, uri:uri, uid:uid, location: location, menu: menu,latitude: latitude,longitude: longitude);
     globals.restaurantList.add(restaurant);
   }
 
@@ -525,9 +528,8 @@ class CustomAppBar extends StatelessWidget {
       int length, BuildContext context, List<FoodItem> foodItems) {
     return GestureDetector(
       onTap: () {
-        if (length > 0) {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => Cart()));
+        if (length >= 0) {
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Cart()));
         } else {
           return;
         }

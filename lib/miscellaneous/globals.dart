@@ -8,9 +8,11 @@ class Restaurant{
   String uri;
   String uid;
   String location;
+  var longitude;
+  var latitude;
   var menu;
 
-  Restaurant({this.name,this.uri,this.uid, this.location, this.menu});
+  Restaurant({this.name,this.uri,this.uid, this.location, this.menu,this.longitude,this.latitude});
 }
 
 class MenuItem{

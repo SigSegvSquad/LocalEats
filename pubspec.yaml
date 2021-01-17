@@ -19,10 +19,11 @@ dependencies:
   font_awesome_flutter: 
   image_picker:
   firebase_database: "3.0.7"
-  location_permissions:
-  geolocator: 
+  geolocator: ^6.1.13
   google_maps_flutter:
   cupertino_icons: ^0.1.2
+  location_permissions: ^3.0.0
+  flutter_map: any
 
 dev_dependencies:
   flutter_test:

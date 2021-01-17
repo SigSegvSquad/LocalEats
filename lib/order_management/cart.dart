@@ -51,7 +51,6 @@ class BottomBar extends StatelessWidget {
             height: 1,
             color: Colors.grey[700],
           ),
-          persons(),
           GestureDetector(
             child: Container(
               margin: EdgeInsets.only(right: 25),
@@ -89,23 +88,7 @@ class BottomBar extends StatelessWidget {
   }
 }
 
-Container persons() {
-  return Container(
-    margin: EdgeInsets.only(right: 10),
-    padding: EdgeInsets.symmetric(vertical: 30),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: <Widget>[
-        Text("Persons",
-            style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w700,
-            )),
-        CustomPersonWidget(),
-      ],
-    ),
-  );
-}
+
 
 Container totalAmount(List<FoodItem> foodItems) {
   return Container(
