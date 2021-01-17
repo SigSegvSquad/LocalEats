@@ -20,7 +20,7 @@ class Menu extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.amber,
+        backgroundColor: globals.accent_color,
         leading: IconButton(
             icon: Icon(Icons.arrow_left),
             onPressed: () {

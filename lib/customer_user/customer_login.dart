@@ -41,77 +41,11 @@ class _SignInPageState extends State<SignInPage> {
                 shape: BoxShape.rectangle,
               ),
             ),
-            Container(
-              decoration: BoxDecoration(
-                  color: globals.accent_color,
-                  borderRadius: BorderRadius.circular(30.0)),
-              width: 225.0,
-              child: Align(
-                alignment: Alignment.centerRight,
-                child: MaterialButton(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Icon(
-                          FontAwesomeIcons.google,
-                          color: Colors.black54,
-                        ),
-                        SizedBox(
-                          width: 10.0,
-                        ),
-                        Text(
-                          'Sign in With Google',
-                          style: TextStyle(color: Colors.black, fontSize: 17.0),
-                        ),
-                      ],
-                    ),
-                    onPressed: () {
-                      final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
-                      final GoogleSignIn _googleSignIn = new GoogleSignIn();
-
-                      Future<FirebaseUser> _signIn(BuildContext context) async {
-                        final GoogleSignInAccount googleUser =
-                            await _googleSignIn.signIn();
-                        final GoogleSignInAuthentication googleAuth =
-                            await googleUser.authentication;
-
-                        final AuthCredential credential =
-                            GoogleAuthProvider.getCredential(
-                                idToken: googleAuth.idToken,
-                                accessToken: googleAuth.accessToken);
-
-                        FirebaseUser userDetails = await _firebaseAuth
-                            .signInWithCredential(credential);
-                        ProviderDetails providerInfo =
-                            new ProviderDetails(userDetails.providerId);
-
-                        List<ProviderDetails> providerData =
-                            new List<ProviderDetails>();
-                        providerData.add(providerInfo);
-
-                        UserDetails details = new UserDetails(
-                            userDetails.providerId,
-                            userDetails.displayName,
-                            userDetails.email,
-                            userDetails.photoUrl,
-                            providerData);
-
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    new ProfilePage(detailsUser: details)));
-                      }
-
-                      _signIn(context);
-                    }),
-              ),
-            ),
             SizedBox(
-              height: 10.0,
+                height: 40.0
             ),
             Card(
-              elevation: 15.0,
+              elevation: 5.0,
               child: Padding(
                 padding: EdgeInsets.all(20.0),
                 child: Column(
@@ -119,7 +53,7 @@ class _SignInPageState extends State<SignInPage> {
                     TextField(
                       controller: emailController,
                       decoration: InputDecoration(
-                        hintText: "Your Email ",
+                        hintText: "Your Email",
                         hintStyle: TextStyle(
                           color: Color(0xFFBDC2CB),
                           fontSize: 18.0,
@@ -188,6 +122,75 @@ class _SignInPageState extends State<SignInPage> {
                     print(e);
                   });
                 }),
+            SizedBox(
+              height: 10.0,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                  color: globals.accent_color,
+                  borderRadius: BorderRadius.circular(30.0)),
+              width: 250.0,
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: MaterialButton(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        Icon(
+                          FontAwesomeIcons.google,
+                          color: Colors.black54,
+                        ),
+                        SizedBox(
+                          width: 10.0,
+                        ),
+                        Text(
+                          'Sign in With Google',
+                          style: TextStyle(color: Colors.black, fontSize: 17.0),
+                        ),
+                      ],
+                    ),
+                    onPressed: () {
+                      final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+                      final GoogleSignIn _googleSignIn = new GoogleSignIn();
+
+                      Future<FirebaseUser> _signIn(BuildContext context) async {
+                        final GoogleSignInAccount googleUser =
+                            await _googleSignIn.signIn();
+                        final GoogleSignInAuthentication googleAuth =
+                            await googleUser.authentication;
+
+                        final AuthCredential credential =
+                            GoogleAuthProvider.getCredential(
+                                idToken: googleAuth.idToken,
+                                accessToken: googleAuth.accessToken);
+
+                        FirebaseUser userDetails = await _firebaseAuth
+                            .signInWithCredential(credential);
+                        ProviderDetails providerInfo =
+                            new ProviderDetails(userDetails.providerId);
+
+                        List<ProviderDetails> providerData =
+                            new List<ProviderDetails>();
+                        providerData.add(providerInfo);
+
+                        UserDetails details = new UserDetails(
+                            userDetails.providerId,
+                            userDetails.displayName,
+                            userDetails.email,
+                            userDetails.photoUrl,
+                            providerData);
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    new ProfilePage(detailsUser: details)));
+                      }
+
+                      _signIn(context);
+                    }),
+              ),
+            ),
             Divider(
               height: 20.0,
             ),
