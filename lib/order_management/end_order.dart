@@ -68,7 +68,7 @@ class Location extends StatelessWidget {
                     ],
                   ),
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/home');
+                    Navigator.of(context).pop();
                   },
                 ),
               ),
