@@ -14,7 +14,7 @@ class FirstPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 10),
+            SizedBox(height: 40),
             Container(
               padding: EdgeInsets.all(120),
               width: 280,
@@ -29,12 +29,13 @@ class FirstPage extends StatelessWidget {
                 shape: BoxShape.rectangle,
               ),
             ),
+            SizedBox(height: 40),
             Container(
               decoration: BoxDecoration(
                   color: globals.accent_color,
                   borderRadius: BorderRadius.circular(30.0),
                   boxShadow: [BoxShadow(blurRadius: 2.0, color: globals.accent_color)]),
-              width: 220,
+              width: 250,
               child: Align(
                 alignment: Alignment.centerRight,
                 child: MaterialButton(
@@ -64,7 +65,7 @@ class FirstPage extends StatelessWidget {
                   color: globals.accent_color,
                   borderRadius: BorderRadius.circular(30.0),
                   boxShadow: [BoxShadow(blurRadius: 2.0, color: globals.accent_color)]),
-              width: 245,
+              width: 250,
               child: Align(
                 alignment: Alignment.centerRight,
                 child: MaterialButton(
